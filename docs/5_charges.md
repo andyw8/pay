@@ -118,6 +118,14 @@ In order to retrieve a PDF invoice for a transaction, an API request is required
 Paddle::Transaction.invoice(id: @charge.processor_id)
 ```
 
+## Receipt Emails
+
+Pay sends a receipt email with the receipt PDF attached whenever a charge succeeds.
+This is done automatically for Stripe, Braintree, and Paddle Classic.
+
+Receipt emails are not sent for Paddle Billing or Lemon Squeezy, since both providers
+already email the customer a receipt by default.
+
 ## Next
 
 See [Subscriptions](6_subscriptions.md)
